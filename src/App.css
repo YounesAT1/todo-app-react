@@ -1,38 +1,107 @@
-.App {
+.todo-app {
+  text-align: center;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.app-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  position: relative;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app-title span {
+  position: relative;
+  margin-right: 1rem;
+}
+.app-title span:after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: -3px;
+  height: 7px;
+  width: 100%;
+  border: solid 4px #6a5acd;
+  border-color: #6a5acd transparent transparent transparent;
+  border-radius: 50%;
+}
+.todo-list {
+  list-style: none;
+  padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.todo-item {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  padding: 10px;
+  word-wrap: break-word;
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.todo-circle {
+  margin-right: 10px;
+  font-size: 24px;
+  color: #007bff;
+}
+.todo-completed {
+  margin-right: 10px;
+  font-size: 24px;
+  color: #008000;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todo-task {
+  flex: 1;
+  margin: 0;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+}
+
+.done {
+  text-decoration: line-through;
+}
+
+.delete-button {
+  cursor: pointer;
+  font-size: 20px;
+  color: #ff0000;
+  transition: transform 0.3s ease-in-out;
+}
+
+.delete-button:hover {
+  transform: scale(1.2);
+}
+
+.task-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  outline: none;
+}
+
+.add-button {
+  background-color: #7b68ee;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 40%;
+}
+.add-button:hover {
+  background-color: #6a5acd;
+  transition: all 0.3s ease-in-out;
+}
+
+.error {
+  color: #ff0000;
+  font-weight: bold;
 }
